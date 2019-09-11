@@ -22,6 +22,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 define('STA_VERSION', '0.0.1');
 define("PLUGIN_DIR", plugin_dir_path(__FILE__));
 
+define('jsPath', plugins_url( '/assets/js/scorpiotek-accessibility.js', __FILE__ ));
+define('cssPath', plugins_url( '/assets/css/scorpiotek-accessibility.css', __FILE__ ));
+
 // Load Assets File
 if ( file_exists( PLUGIN_DIR . '/inc/assets.php' ) ) {
     require_once( 'inc/assets.php' );
@@ -55,3 +58,4 @@ if ( file_exists( PLUGIN_DIR . '/inc/shortcodes.php' ) ) {
 else {
     error_log( 'Error loading file /inc/shortcodes.php' );
 }
+
